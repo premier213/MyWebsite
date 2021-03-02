@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import Header from "./components/header";
+import Nav from "./components/nav";
+import Home from "./components/home";
 
 const Body = styled.div`
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -10,18 +11,18 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Body className="bg-gray-300">
-          <Header>
+        <Body>
+          <Nav>
             <Switch>
               <Route exact path="/">
-                home
+                <Home />
               </Route>
               <Route path="/about">about</Route>
               <Route path="/portfolio">portfolio</Route>
               <Route path="/contact">contact</Route>
               <Route path="*">404</Route>
             </Switch>
-          </Header>
+          </Nav>
         </Body>
       </div>
     </Router>
