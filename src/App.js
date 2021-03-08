@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Nav from "./components/nav";
 import Home from "./components/home";
 import About from "./components/about";
+import Portfolio from "./components/portfolio";
+import Contact from "./components/contact";
 
 const Body = styled.div`
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -14,13 +16,13 @@ function App() {
   return (
     <Router>
       <Body>
-        <div className="App min-h-screen">
+        <div className="App">
           <Nav />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/portfolio">portfolio</Route>
-            <Route path="/contact">contact</Route>
+            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/contact" component={Contact} />
             <Route path="*">404</Route>
           </Switch>
         </div>

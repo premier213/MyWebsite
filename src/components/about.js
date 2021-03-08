@@ -1,5 +1,5 @@
 const About = () => (
-  <div className="h-screen lg:bg-gray-300 sm:bg-white">About</div>
+  <div className="h-screen sm:bg-white lg:bg-gray-300">About</div>
 );
 
 export default About;

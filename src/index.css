@@ -6,3 +6,7 @@
 html {
   overflow: hidden;
 }
+.geo-pattern {
+  background-image: url('./assets/img/geo.svg');
+  background-size: 300px;
+}
