@@ -4,7 +4,7 @@ const NavDesktop = () => (
   <div>
     <div className="xl:flex hidden">
       <ul className="flex text-gray-700">
-        <NavLink to="/" activeClassName="text-red">
+        <NavLink to="/" activeClassName="text-red" exact>
           <li className="pr-6">Home</li>
         </NavLink>
         <NavLink to="/about" activeClassName="text-red">
