@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import Nav from "./components/nav";
+import Nav from "./components/nav/navMobile";
 import Home from "./components/home";
 import About from "./components/about";
 import Portfolio from "./components/portfolio";
