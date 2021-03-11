@@ -15,7 +15,7 @@ module.exports = {
       full: "9999px",
       25: "25%",
     },
-    height: theme => ({
+    height: (theme) => ({
       auto: "auto",
       ...theme("spacing"),
       "10v": "10vh",
@@ -147,6 +147,7 @@ module.exports = {
       48: "12rem",
       56: "14rem",
       64: "16rem",
+      75: "18.75rem",
       80: "20rem",
       "10v": "10vw",
       "15v": "15vw",

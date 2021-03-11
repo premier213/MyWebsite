@@ -1,7 +1,10 @@
-import { motion } from "framer-motion";
 import { RiDownloadCloud2Line } from "react-icons/ri";
+import Slider from "react-slick";
+import { v4 as uuidv4 } from "uuid";
 import NavDesktop from "./nav/navDesktop";
 import avatar from "../assets/img/avatar.png";
+import "~slick-carousel/slick/slick.css";
+import "~slick-carousel/slick/slick-theme.css";
 
 const name = "Meysam Saberi";
 const cv = "Download CV";
@@ -11,6 +14,7 @@ const MySkill = "My Skills";
 const skills = [
   "React.js",
   "JavaScript",
+  "Sass & Less",
   "UI & UX",
   "git & github",
   "Figma",
@@ -19,14 +23,7 @@ const skills = [
   "Tailwindcss",
   "Material UI",
 ];
-const arraySkills = (item) => (
-  <li
-    key={item.index}
-    className="flex-nowrap w-80 flex-auto px-4 py-4 m-1 bg-gray-300"
-  >
-    {item}
-  </li>
-);
+const arraySkills = (item) => <div key={uuidv4()}>{item}</div>;
 const About = () => (
   <div className="sm:bg-white xl:items-center xl:justify-center xl:bg-gray-300 flex min-h-screen">
     <div className="rounded-4xl sm:flex-row xl:flex-row-reverse xl:w-75v xl:h-75v xl:bg-white flex flex-col">
@@ -52,14 +49,10 @@ const About = () => (
         <div className="font-display 2xl:text-6xl xl:mt-16 lg:text-5xl mt-2 text-xl text-center text-gray-700">
           {MySkill}
         </div>
-        <div className="w-80 h-20 mt-4 overflow-x-hidden text-gray-800">
-          <motion.div
-            drag="x"
-            dragConstraints={{ left: -50, right: 0 }}
-            className="w-80 justify-center"
-          >
-            <ul className="flex">{skills.map(arraySkills)}</ul>
-          </motion.div>
+        <div className="w-70v mt-4 text-gray-800">
+          <Slider speed={500} dots={false} slidesToShow={3}>
+            {skills.map(arraySkills)}
+          </Slider>
         </div>
       </div>
     </div>
