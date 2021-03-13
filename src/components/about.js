@@ -39,7 +39,7 @@ const About = () => (
       <div className="geo-pattern w-100v 2xl:w-50v h-20v bg-yellow rounded-br-25 sm:w-30v sm:h-80v sm:rounded-br-full xl:w-40v xl:h-75v xl:rounded-r-4xl" />
       <div className=" 2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h sm:w-70v sm:h-80v my-10h mx-12">
         <NavDesktop />
-        <div className="xl:ml-10 xl:mt-5v xl:flex-col xl:mt-16 lg:-ml-32 sm:justify-start sm:-ml-15v sm:-mt-10h flex justify-center -mt-40">
+        <div className="xl:ml-10 xl:flex-col xl:mt-10 lg:-ml-32 sm:justify-start sm:-ml-15v sm:-mt-10h flex justify-center -mt-40">
           <img
             src={avatar}
             alt="profile"
