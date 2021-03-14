@@ -2,7 +2,6 @@ import { RiDownloadCloud2Line } from "react-icons/ri";
 import { v4 as uuidv4 } from "uuid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
-
 import NavDesktop from "./nav/navDesktop";
 import avatar from "../assets/img/avatar.png";
 import "swiper/swiper.scss";
@@ -24,6 +23,7 @@ const skills = [
   "Bootstrap",
   "Tailwindcss",
   "Material UI",
+  "Chakra UI",
 ];
 const arraySkills = (item) => (
   <SwiperSlide
