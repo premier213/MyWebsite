@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import NavDesktop from "./nav/navDesktop";
+import myWork from "../data";
 
 const Portfolio = () => (
   <div className="sm:bg-white xl:items-center xl:justify-center xl:bg-gray-300 flex min-h-screen">
