@@ -1,9 +1,9 @@
-import psychology from "./assets/img/psychology.jpg";
-import alsahwa from "./assets/img/alsahwa.jpg";
-import forkitup from "./assets/img/forkitup.jpg";
-import firstpersonradio from "./assets/img/firstpersonradio.jpg";
-import flaticon from "./assets/img/flaticon.png";
-import bellaflau from "./assets/img/bellaflau.jpg";
+import psychology from "./assets/img/psychology.webp";
+import alsahwa from "./assets/img/alsahwa.webp";
+import forkitup from "./assets/img/forkitup.webp";
+import firstpersonradio from "./assets/img/firstpersonradio.webp";
+import flaticon from "./assets/img/flaticon.webp";
+import bellaflau from "./assets/img/bellaflau.webp";
 
 const myWorks = [
   {
