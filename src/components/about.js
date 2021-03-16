@@ -1,3 +1,4 @@
+import map from "lodash/map";
 import { RiDownloadCloud2Line } from "react-icons/ri";
 import { v4 as uuidv4 } from "uuid";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -78,7 +79,7 @@ const About = () => (
             loop="true"
             breakpoints={{ 640: { slidesPerView: 4 } }}
           >
-            {skills.map(arraySkills)}
+            {map(skills, arraySkills)}
           </Swiper>
         </div>
       </div>
