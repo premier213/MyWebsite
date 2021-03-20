@@ -12,7 +12,7 @@ const myWorks = [
     context:
       "Foundation is an association that shares sustainable best practices for psychology. They approached me to help them shape a viable digital concept and to develop their brand.",
     solution:
-      "I wireframed the main templates and created an organizational taxonomy for all the categories. Nine days later, I delivered a brand guideline and UI design for their concept.",
+      "I Wireframed the main templates and created an organizational taxonomy for all the categories.",
     img: psychology,
   },
   {
@@ -28,7 +28,7 @@ const myWorks = [
     id: 3,
     title: "Fork it Up",
     context:
-      "Fork it Up is an Resturan Based in Thailand. They approached me to help them shape a viable digital concept and to develop their brand.",
+      "Fork it Up is an Restaurant Based in Thailand. They approached me to help them shape a viable digital concept and to develop their brand.",
     solution:
       "I wireframed the main Color Palette and created an Logo for all of theme. six days later, I delivered a brand guideline and Logo for their concept.",
     img: forkitup,
