@@ -76,6 +76,7 @@ const Portfolio = () => {
           <div className="font-display text-md">{solution}</div>
           <div className="text-sm">{work[index].solution}</div>
           <div className="bg-blue flex justify-center py-1 mt-2 text-white">
+            
             <button
               type="button"
               onClick={nextHandler}
