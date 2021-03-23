@@ -11,15 +11,25 @@ import myWorks from "../data";
 
 const solution = "solution";
 const next = "next";
-const image = (props) => myWorks[props.index].img;
+const imageXS = (props) => myWorks[props.index].imgXS;
+const imageSM = (props) => myWorks[props.index].imgSM;
+const imageMD = (props) => myWorks[props.index].imgMD;
 const Img = styled.div`
-  background-image: url(${image});
-  background-position: top;
-  background-size: 20vw auto;
+  @media (max-width: 640px) {
+    background-image: url(${imageXS});
+  }
+  @media (min-width: 768px) {
+    background-image: url(${imageSM});
+  }
+  @media (min-width: 1024px) {
+    background-image: url(${imageMD});
+  }
+  background-size: cover;
+  background-position: center;
 `;
 const Portfolio = () => {
   const work = myWorks;
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(0);
   const nextHandler = () => {
     const latest = last(work);
     if (index + 1 === latest.id) {
@@ -56,7 +66,7 @@ const Portfolio = () => {
       <div className="rounded-4xl sm:flex-row xl:flex-row-reverse xl:w-75v xl:h-75v xl:bg-white flex flex-col">
         <Img
           index={index}
-          className="w-100v 2xl:w-50v h-30v bg-yellow rounded-br-25 sm:w-30v sm:h-80v sm:rounded-br-full xl:w-40v xl:h-75v xl:rounded-r-4xl"
+          className="w-100v 2xl:w-50v h-30v rounded-br-25 sm:w-30v sm:h-80v sm:rounded-br-full xl:w-40v xl:h-75v xl:rounded-r-4xl bg-white"
         />
         <div className=" 2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h sm:w-70v sm:h-80v mx-12">
           <NavDesktop />
