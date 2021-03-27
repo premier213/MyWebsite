@@ -10,7 +10,7 @@ import NavDesktop from "./nav/navDesktop";
 import myWorks from "../data";
 
 const solution = "solution";
-const next = "next";
+const next = "Next";
 const imageXS = (props) => myWorks[props.index].imgXS;
 const imageSM = (props) => myWorks[props.index].imgSM;
 const imageMD = (props) => myWorks[props.index].imgMD;
@@ -66,24 +66,32 @@ const Portfolio = () => {
       <div className="rounded-4xl sm:flex-row xl:flex-row-reverse xl:w-75v xl:h-75v xl:bg-white flex flex-col">
         <Img
           index={index}
-          className="w-100v 2xl:w-50v h-30v rounded-br-25 sm:w-30v sm:h-80v sm:rounded-br-full xl:w-40v xl:h-75v xl:rounded-r-4xl bg-yellow"
+          className="w-100v 2xl:w-50v h-30v rounded-br-25 sm:w-30v sm:h-80v sm:rounded-br-full xl:w-60v xl:h-75v xl:rounded-r-4xl bg-yellow"
         />
-        <div className=" 2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h sm:w-70v sm:h-80v mx-12">
+        <div className=" 2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h sm:w-70v sm:h-80v xl:w-40v mx-12">
           <NavDesktop />
-          <div className="flex justify-center my-6">{dot}</div>
-          <div className="font-display text-md">{work[index].title}</div>
-          <div className="text-sm">{work[index].context}</div>
-          <div className="font-display text-md">{solution}</div>
-          <div className="text-sm">{work[index].solution}</div>
-          <div className="bg-blue flex justify-center py-1 mt-2 text-white">
-            <button
-              type="button"
-              onClick={nextHandler}
-              className="focus:outline-none flex"
-            >
-              {next} <RiArrowDropRightLine className="text-2xl" />
-            </button>
+          <div className="md:hidden flex justify-center my-6">{dot}</div>
+          <div className="font-display text-md md:text-3xl xl:mt-12 text-gray-800">
+            {work[index].title}
           </div>
+          <div className="md:text-xl md:mt-4 md:w-50v xl:w-40v 2xl:w-30v xl:text-lg text-sm">
+            {work[index].context}
+          </div>
+          <div className="font-display text-md md:text-2xl md:mt-8 xl:mt-4 xl:text-md text-gray-800">
+            {solution}
+          </div>
+          <div className=" md:w-50v md:text-xl md:mt-4 xl:w-40v 2xl:w-30v xl:text-lg text-sm">
+            {work[index].solution}
+          </div>
+          <button
+            type="button"
+            onClick={nextHandler}
+            className="focus:outline-none flex"
+          >
+            <div className="bg-blue md:mt-12 xl:mt-4 flex justify-center px-4 py-2 mt-2 text-white rounded-lg">
+              {next} <RiArrowDropRightLine className="text-2xl" />
+            </div>
+          </button>
         </div>
       </div>
     </div>
