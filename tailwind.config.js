@@ -1,3 +1,5 @@
+const tailwindScreen = require("tailwindcss-debug-screens");
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
@@ -12,8 +14,10 @@ module.exports = {
       "2xl": "1rem",
       "3xl": "1.5rem",
       "4xl": "3rem",
+      "7xl": "7rem",
       full: "9999px",
       25: "25%",
+      50: "50%",
     },
     height: (theme) => ({
       auto: "auto",
@@ -214,5 +218,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("tailwindcss-debug-screens")],
+  plugins: [tailwindScreen],
 };
