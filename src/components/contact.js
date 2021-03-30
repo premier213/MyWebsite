@@ -68,7 +68,7 @@ const Contact = () => {
                 <RiSendPlaneLine className="mt-1 ml-2 text-2xl" />
               </button>
             </div>
-            <div className="flex mt-8 text-2xl text-white">
+            <div className="sm:text-4xl flex mt-8 text-2xl text-white">
               <button className="mx-2" type="button">
                 <a
                   href="mailto:premier213@outlook.com"
