@@ -1,5 +1,11 @@
 import { useForm } from "react-hook-form";
-import { RiSendPlaneLine } from "react-icons/ri";
+import {
+  RiSendPlaneLine,
+  RiMailSendLine,
+  RiDribbbleFill,
+  RiGithubLine,
+  RiLinkedinLine,
+} from "react-icons/ri";
 
 const getInTouch = "Get in touch if you need help with a project !";
 const send = "Send";
@@ -11,14 +17,14 @@ const Contact = () => {
   return (
     <div className="sm:bg-white xl:items-center xl:justify-center xl:bg-gray-300 flex min-h-screen">
       <div className="h-80h bg-yellow w-90v rounded-br-7xl">
-        <div className="font-display mx-8 mt-8 text-4xl text-white">
+        <div className="font-display sm:text-4xl md:text-6xl mx-8 mt-8 text-xl text-white">
           {getInTouch}
         </div>
         <div className="mx-8 mt-4">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <input
-                className="bg-yellow focus:outline-none focus:border-dark focus:placeholder-dark h-12 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                className="bg-yellow focus:outline-none focus:border-dark focus:placeholder-dark h-12 my-1 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                 type="text"
                 placeholder="Full Name"
                 name="fullName"
@@ -27,7 +33,6 @@ const Contact = () => {
               <div className="text-dark">
                 {errors.fullName && "your name is required"}
               </div>
-
               <input
                 className="bg-yellow focus:outline-none focus:border-dark focus:placeholder-dark h-12 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                 type="email"
@@ -61,6 +66,34 @@ const Contact = () => {
               >
                 {send}
                 <RiSendPlaneLine className="mt-1 ml-2 text-2xl" />
+              </button>
+            </div>
+            <div className="flex mt-8 text-2xl text-white">
+              <button className="mx-2" type="button">
+                <a
+                  href="mailto:premier213@outlook.com"
+                  title="Email:premier213@outlook.com"
+                >
+                  <RiMailSendLine />
+                </a>
+              </button>
+              <button className="mx-2" type="button">
+                <a href="https://dribbble.com/premier213" title="Dribbble">
+                  <RiDribbbleFill />
+                </a>
+              </button>
+              <button className="mx-2" type="button">
+                <a href="https://github.com/premier213" title="Github">
+                  <RiGithubLine />
+                </a>
+              </button>
+              <button className="mx-2" type="button">
+                <a
+                  href="https://www.linkedin.com/in/premier213"
+                  title="LinkedIn"
+                >
+                  <RiLinkedinLine />
+                </a>
               </button>
             </div>
           </form>

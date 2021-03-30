@@ -71,7 +71,7 @@ const Portfolio = () => {
         <div className=" 2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h sm:w-70v sm:h-80v xl:w-40v mx-12">
           <NavDesktop />
           <div className="md:hidden flex justify-center my-6">{dot}</div>
-          <div className="font-display text-md md:text-3xl xl:mt-12 text-gray-800">
+          <div className="font-display text-md md:text-3xl xl:mt-8 text-gray-800">
             {work[index].title}
           </div>
           <div className="md:text-xl md:mt-4 md:w-50v xl:w-40v 2xl:w-30v xl:text-lg text-sm">
