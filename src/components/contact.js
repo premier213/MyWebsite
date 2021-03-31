@@ -24,26 +24,26 @@ const Contact = () => {
           111
         </div>
         <div className="bg-yellow xl:bg-white w-90v xl:w-40v h-80h xl:h-auto xl:rounded-l-4xl rounded-br-7xl xl:rounded-br-none">
-          <div className="2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h sm:w-70v sm:h-80v xl:w-40v mx-12">
+          <div className="2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h sm:w-70v sm:h-80v xl:w-40v md:mt-0 mx-12">
             <NavDesktop />
-            <div className="font-display sm:text-4xl w-60v 2xl:mt-24 lg:mx-16 xl:text-gray-800 xl:text-xl xl:mx-0 xl:mt-8 mx-8 text-xl text-white">
+            <div className="xl:mt-8 xl:w-20v font-display sm:text-4xl xl:text-lg xl:text-gray-800 mt-2 text-lg text-white">
               {getInTouch}
             </div>
-            <div className="lg:mx-16 xl:mx-0 mx-8 mt-4">
+            <div className="mt-2">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
                   <input
-                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:focus:placeholder-red xl:border-dark xl:focus:border-red h-12 my-1 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:focus:placeholder-red xl:border-dark xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm xl:my-1 h-8 my-1 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                     type="text"
                     placeholder="Full Name"
                     name="fullName"
                     ref={register({ required: true, min: 3 })}
                   />
-                  <div className="text-dark">
+                  <div className="text-dark xl:text-xs text-sm">
                     {errors.fullName && "your name is required"}
                   </div>
                   <input
-                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red h-12 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm xl:my-1 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                     type="email"
                     placeholder="Email"
                     name="email"
@@ -52,11 +52,11 @@ const Contact = () => {
                       pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                     })}
                   />
-                  <div className="text-dark">
+                  <div className="text-dark xl:text-xs text-sm">
                     {errors.email && "your Email is required"}
                   </div>
                   <input
-                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red h-12 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm xl:my-1 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                     name="message"
                     placeholder="Message"
                     ref={register({
@@ -64,13 +64,13 @@ const Contact = () => {
                       min: 3,
                     })}
                   />
-                  <div className="text-dark">
+                  <div className="text-dark xl:text-xs text-sm">
                     {errors.message && "message input is required"}
                   </div>
                 </div>
                 <div>
                   <motion.button
-                    className="bg-blue rounded-xl focus:outline-none flex px-4 py-2 mt-4 font-serif text-lg text-white"
+                    className="bg-blue focus:outline-none flex px-4 py-2 mt-4 font-serif text-lg text-white rounded-lg"
                     type="submit"
                   >
                     {send}
