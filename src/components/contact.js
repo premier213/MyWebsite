@@ -19,12 +19,12 @@ const Contact = () => {
   return (
     <div className="sm:bg-white xl:items-center xl:justify-center xl:bg-gray-300 flex min-h-screen">
       <div className="h-80h rounded-br-7xl bg-yellow xl:bg-white w-90v xl:rounded-4xl xl:flex-row-reverse xl:w-75v xl:h-75v">
-        <div className="2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h sm:w-70v sm:h-80v xl:w-40v">
+        <div className="2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h md:my-4 sm:w-70v sm:h-80v xl:w-40v">
           <NavDesktop />
-          <div className="font-display sm:text-4xl md:text-6xl mx-8 mt-4 text-xl text-white">
+          <div className="font-display sm:text-4xl w-60v lg:mx-16 mx-8 text-xl text-white">
             {getInTouch}
           </div>
-          <div className="mx-8 mt-4">
+          <div className="lg:mx-16 mx-8 mt-4">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div>
                 <input
