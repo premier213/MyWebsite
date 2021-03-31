@@ -30,7 +30,7 @@ const Contact = () => {
           <div className="font-display 2xl:text-3xl text-2xl text-white">
             {info}
           </div>
-          <div className="text-md 2xl:text-xl 2xl:my-2 2xl:mt-8 flex font-serif text-white">
+          <div className="text-md 2xl:text-xl 2xl:my-2 flex mt-8 font-serif text-white">
             <RiMailSendLine className="my-2 mt-1 mr-3 text-xl" />
             {email}
           </div>
@@ -38,7 +38,7 @@ const Contact = () => {
             <RiPhoneFill className="mt-1 mr-3 text-xl" />
             {phone}
           </div>
-          <div className="2xl:text-2xl 2xl:my-4 flex my-2 font-serif text-xl text-white">
+          <div className="2xl:text-2xl flex my-4 font-serif text-xl text-white">
             <motion.button
               className="mr-2"
               type="button"
