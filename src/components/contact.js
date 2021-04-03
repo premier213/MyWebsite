@@ -1,3 +1,4 @@
+import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import {
@@ -17,11 +18,24 @@ const partMail = ["premier213", "@outlook", ".com"];
 const email = partMail.join("");
 const partPhone = ["+98913", "3617506"];
 const phone = partPhone.join("");
-
 const Contact = () => {
   const { register, handleSubmit, errors } = useForm();
   function onSubmit(data) {
-    console.log(data.fullName);
+    emailjs
+      .send(
+        "service_imk0gbz",
+        "template_tx2p6or",
+        data,
+        "user_lH7o1Ybsap7X6q6XikbMM"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
   return (
     <div className="sm:bg-white xl:items-center xl:justify-center xl:bg-gray-300 flex min-h-screen">
@@ -81,7 +95,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
                   <input
-                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:focus:placeholder-red xl:border-dark xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 2xl:border-b-3 h-8 my-1 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:focus:placeholder-red xl:border-dark xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 2xl:border-b-3 xl:text-gray-800 h-8 my-1 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                     type="text"
                     placeholder="Full Name"
                     name="fullName"
@@ -91,7 +105,7 @@ const Contact = () => {
                     {errors.fullName && "your name is required"}
                   </div>
                   <input
-                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 xl:text-gray-800 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                     type="email"
                     placeholder="Email"
                     name="email"
@@ -104,7 +118,7 @@ const Contact = () => {
                     {errors.email && "your Email is required"}
                   </div>
                   <input
-                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                    className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:text-gray-800 xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                     name="message"
                     placeholder="Message"
                     ref={register({
