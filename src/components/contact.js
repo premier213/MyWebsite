@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
@@ -7,36 +8,49 @@ import {
   RiDribbbleFill,
   RiGithubLine,
   RiPhoneFill,
+  RiCheckFill,
   RiLinkedinLine,
+  RiEmotionUnhappyLine,
 } from "react-icons/ri";
 import NavDesktop from "./nav/navDesktop";
 
 const getInTouch = "Get in touch if you need help with a project !";
-const send = "Send";
 const info = "info";
 const partMail = ["premier213", "@outlook", ".com"];
 const email = partMail.join("");
 const partPhone = ["+98913", "3617506"];
 const phone = partPhone.join("");
+
 const Contact = () => {
+  const [SendColor, setSendColor] = useState(["bg-blue", "Send"]);
   const { register, handleSubmit, errors } = useForm();
   function onSubmit(data) {
     emailjs
       .send(
-        "service_imk0gbz",
-        "template_tx2p6or",
+        process.env.REACT_APP_EMAIL_SERVICE,
+        process.env.REACT_APP_EMAIL_TEMPLATE,
         data,
-        "user_lH7o1Ybsap7X6q6XikbMM"
+        process.env.REACT_APP_EMAIL_USERID
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
+          setSendColor(["bg-green", "Sent"]);
         },
-        (error) => {
-          console.log(error.text);
+        () => {
+          setSendColor(["bg-red", "Retry"]);
         }
       );
   }
+  const checkIcon = () => {
+    switch (SendColor[1]) {
+      case "Sent":
+        return <RiCheckFill className="mt-1 ml-2 text-2xl" />;
+      case "Retry":
+        return <RiEmotionUnhappyLine className="mt-1 ml-2 text-2xl" />;
+      default:
+        return <RiSendPlaneLine className="mt-1 ml-2 text-2xl" />;
+    }
+  };
   return (
     <div className="sm:bg-white xl:items-center xl:justify-center xl:bg-gray-300 flex min-h-screen">
       <div className="sm:flex-row xl:flex-row-reverse xl:w-75v xl:h-75v flex flex-col">
@@ -132,11 +146,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <motion.button
-                    className="bg-blue focus:outline-none flex px-4 py-2 mt-4 font-serif text-lg text-white rounded-lg"
+                    className={`${SendColor[0]} focus:outline-none flex px-4 py-2 mt-4 font-serif text-lg text-white rounded-lg`}
                     type="submit"
                   >
-                    {send}
-                    <RiSendPlaneLine className="mt-1 ml-2 text-2xl" />
+                    {SendColor[1]}
+                    {checkIcon()}
                   </motion.button>
                 </div>
                 <div className="sm:text-4xl xl:hidden flex mt-8 text-2xl text-white">
