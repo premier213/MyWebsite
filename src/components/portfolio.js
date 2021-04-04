@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import map from "lodash/map";
 import last from "lodash/last";
 import styled from "styled-components";
@@ -27,6 +28,24 @@ const Img = styled.div`
   background-size: cover;
   background-position: center;
 `;
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+const items = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 const Portfolio = () => {
   const work = myWorks;
   const [index, setIndex] = useState(0);
@@ -70,28 +89,48 @@ const Portfolio = () => {
         />
         <div className=" 2xl:my-10h xl:my-10h xl:mx-20 h-60v sm:my-20h sm:w-70v sm:h-80v xl:w-40v mx-12">
           <NavDesktop />
-          <div className="md:hidden flex justify-center my-6">{dot}</div>
-          <div className="font-display text-md md:text-3xl xl:mt-8 text-gray-800">
-            {work[index].title}
-          </div>
-          <div className="md:text-xl md:mt-4 md:w-50v xl:w-40v 2xl:w-30v xl:text-lg text-sm">
-            {work[index].context}
-          </div>
-          <div className="font-display text-md md:text-2xl md:mt-8 xl:mt-4 xl:text-md text-gray-800">
-            {solution}
-          </div>
-          <div className=" md:w-50v md:text-xl md:mt-4 xl:w-40v 2xl:w-30v xl:text-lg text-sm">
-            {work[index].solution}
-          </div>
-          <button
-            type="button"
-            onClick={nextHandler}
-            className="focus:outline-none flex"
-          >
-            <div className="bg-blue md:mt-12 xl:mt-4 flex justify-center px-4 py-2 mt-2 text-white rounded-lg">
-              {next} <RiArrowDropRightLine className="text-2xl" />
-            </div>
-          </button>
+          <motion.div variants={container} initial="hidden" animate="visible">
+            <motion.div
+              variants={items}
+              className="md:hidden flex justify-center my-6"
+            >
+              {dot}
+            </motion.div>
+            <motion.div
+              variants={items}
+              className="font-display text-md md:text-3xl xl:mt-8 text-gray-800"
+            >
+              {work[index].title}
+            </motion.div>
+            <motion.div
+              variants={items}
+              className="md:text-xl md:mt-4 md:w-50v xl:w-40v 2xl:w-30v xl:text-lg text-sm"
+            >
+              {work[index].context}
+            </motion.div>
+            <motion.div
+              variants={items}
+              className="font-display text-md md:text-2xl md:mt-8 xl:mt-4 xl:text-md text-gray-800"
+            >
+              {solution}
+            </motion.div>
+            <motion.div
+              variants={items}
+              className=" md:w-50v md:text-xl md:mt-4 xl:w-40v 2xl:w-30v xl:text-lg text-sm"
+            >
+              {work[index].solution}
+            </motion.div>
+            <motion.button
+              variants={items}
+              type="button"
+              onClick={nextHandler}
+              className="focus:outline-none flex"
+            >
+              <motion.div className="bg-blue md:mt-12 xl:mt-4 flex justify-center px-4 py-2 mt-2 text-white rounded-lg">
+                {next} <RiArrowDropRightLine className="text-2xl" />
+              </motion.div>
+            </motion.button>
+          </motion.div>
         </div>
       </div>
     </div>
