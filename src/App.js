@@ -1,4 +1,4 @@
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import Nav from "./components/nav/navMobile";
 import Home from "./components/home";
@@ -24,9 +24,7 @@ function App() {
             <Route path="/about" component={About} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/contact" component={Contact} />
-            <Route path="/*">
-              <NotFound />
-            </Route>
+            <Route path="" component={NotFound} />
           </Switch>
         </div>
       </Body>
