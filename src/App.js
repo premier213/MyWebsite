@@ -5,6 +5,7 @@ import Home from "./components/home";
 import About from "./components/about";
 import Portfolio from "./components/portfolio";
 import Contact from "./components/contact";
+import NotFound from "./components/notFound";
 
 const Body = styled.div`
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -23,7 +24,9 @@ function App() {
             <Route path="/about" component={About} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/contact" component={Contact} />
-            <Route path="*">404</Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
         </div>
       </Body>
