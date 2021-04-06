@@ -1,4 +1,4 @@
-const tailwindScreen = require("tailwindcss-debug-screens");
+// const tailwindScreen = require("tailwindcss-debug-screens");
 
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
@@ -219,5 +219,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [tailwindScreen],
+  plugins: [],
 };

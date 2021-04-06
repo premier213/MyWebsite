@@ -39,7 +39,7 @@ const container = {
     },
   },
 };
-const items = {
+const animeItems = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
@@ -91,37 +91,37 @@ const Portfolio = () => {
           <NavDesktop />
           <motion.div variants={container} initial="hidden" animate="visible">
             <motion.div
-              variants={items}
+              variants={animeItems}
               className="md:hidden flex justify-center my-6"
             >
               {dot}
             </motion.div>
             <motion.div
-              variants={items}
+              variants={animeItems}
               className="font-display text-md md:text-3xl xl:mt-8 text-gray-800"
             >
               {work[index].title}
             </motion.div>
             <motion.div
-              variants={items}
+              variants={animeItems}
               className="md:text-xl md:mt-4 md:w-50v xl:w-40v 2xl:w-30v xl:text-lg text-sm"
             >
               {work[index].context}
             </motion.div>
             <motion.div
-              variants={items}
+              variants={animeItems}
               className="font-display text-md md:text-2xl md:mt-8 xl:mt-4 xl:text-md text-gray-800"
             >
               {solution}
             </motion.div>
             <motion.div
-              variants={items}
+              variants={animeItems}
               className=" md:w-50v md:text-xl md:mt-4 xl:w-40v 2xl:w-30v xl:text-lg text-sm"
             >
               {work[index].solution}
             </motion.div>
             <motion.button
-              variants={items}
+              variants={animeItems}
               type="button"
               onClick={nextHandler}
               className="focus:outline-none flex"

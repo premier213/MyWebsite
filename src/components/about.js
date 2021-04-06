@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import NavDesktop from "./nav/navDesktop";
 import avatar from "../assets/img/avatar.png";
+import cvPdf from "../assets/cv.pdf";
 import "swiper/swiper.scss";
 
 SwiperCore.use([Autoplay]);
@@ -74,7 +75,9 @@ const About = () => (
               type="button"
               className="bg-red focus:outline-none xl:flex hidden w-40 px-4 py-2 mt-8 -ml-8 text-sm font-thin text-gray-100 rounded-lg"
             >
-              {cv}
+              <a href={cvPdf} download>
+                {cv}
+              </a>
               <RiDownloadCloud2Line className="flex content-center mx-1 text-xl" />
             </motion.button>
           </motion.div>
@@ -93,7 +96,9 @@ const About = () => (
               type="button"
               className="bg-red focus:outline-none flex px-4 py-2 text-lg font-thin text-gray-100 rounded-lg"
             >
-              {cv}
+              <a href={cvPdf} download>
+                {cv}
+              </a>
               <RiDownloadCloud2Line className="flex content-center mx-2 text-2xl" />
             </motion.button>
           </motion.div>

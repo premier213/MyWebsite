@@ -185,7 +185,7 @@ const Contact = () => {
                     </div>
                     <motion.input
                       variants={items}
-                      className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:text-gray-800 xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                      className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:text-gray-800 xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 w-48 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                       name="message"
                       placeholder="Message"
                       ref={register({
