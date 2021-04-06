@@ -61,11 +61,6 @@ const Portfolio = () => {
     const clickHandler = () => {
       setIndex(item.id - 1);
     };
-    const active = (
-      <RiCheckboxBlankCircleFill
-        className={`text-${item.id === index + 1 ? "blue" : "gray-300"}`}
-      />
-    );
     return (
       <div key={item.id}>
         <button
@@ -74,12 +69,15 @@ const Portfolio = () => {
           onKeyPress={clickHandler}
           className="focus:outline-none"
         >
-          {active}
+          <RiCheckboxBlankCircleFill
+            className={`${
+              item.id === index + 1 ? "text-blue" : "text-gray-300"
+            }`}
+          />
         </button>
       </div>
     );
   }
-  const dot = map(work, dots);
   return (
     <div className="sm:bg-white xl:items-center xl:justify-center xl:bg-gray-300 flex min-h-screen">
       <div className="rounded-4xl sm:flex-row xl:flex-row-reverse xl:w-75v xl:h-75v xl:bg-white flex flex-col">
@@ -94,7 +92,7 @@ const Portfolio = () => {
               variants={animeItems}
               className="md:hidden flex justify-center my-6"
             >
-              {dot}
+              {map(work, dots)}
             </motion.div>
             <motion.div
               variants={animeItems}
