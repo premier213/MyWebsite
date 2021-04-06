@@ -160,7 +160,7 @@ const Contact = () => {
                   <div>
                     <motion.input
                       variants={items}
-                      className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:focus:placeholder-red xl:border-dark xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 2xl:border-b-3 xl:text-gray-800 h-8 my-1 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                      className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:focus:placeholder-red xl:border-dark xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 2xl:border-b-3 xl:text-gray-800 w-56 h-8 my-1 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                       type="text"
                       placeholder="Full Name"
                       name="fullName"
@@ -171,7 +171,7 @@ const Contact = () => {
                     </div>
                     <motion.input
                       variants={items}
-                      className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 xl:text-gray-800 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                      className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 xl:text-gray-800 w-56 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                       type="email"
                       placeholder="Email"
                       name="email"
@@ -185,7 +185,7 @@ const Contact = () => {
                     </div>
                     <motion.input
                       variants={items}
-                      className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:text-gray-800 xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 w-48 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
+                      className="bg-yellow xl:bg-white focus:outline-none focus:border-dark focus:placeholder-dark xl:text-gray-800 xl:placeholder-gray-800 xl:border-dark xl:focus:placeholder-red xl:focus:border-red sm:h-12 sm:font-2xl xl:text-sm 2xl:text-xl xl:my-1 w-56 h-8 my-2 font-serif text-lg text-white placeholder-white border-b-2 border-white"
                       name="message"
                       placeholder="Message"
                       ref={register({
