@@ -1,15 +1,8 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import NavDesktop from "./nav/navDesktop";
 
-const describe = "hhhhhhhhhh";
-const hi = "hhhhhhhhh!";
-const btn = "hhhhhhhhhhhh";
-const Button = styled.button`
-  -webkit-box-shadow: -4px 6px 0px 0px #ff4a4a;
-  box-shadow: -4px 6px 0px 0px #ff4a4a;
-`;
+const describe = "Page Not Found";
+const hi = "Oops!";
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
@@ -46,14 +39,6 @@ const NotFound = () => (
             className="2xl:text-3xl sm:mt-8 sm:w-40v xl:mt-8 xl:max-w-sm xl:text-2xl sm:text-3xl mt-2 text-xl font-thin text-gray-700"
           >
             {describe}
-          </motion.div>
-          <motion.div variants={item} className="text-xl font-thin">
-            <Button
-              type="button"
-              className="2xl:text-2xl bg-dark xl:text-lg focus:outline-none px-6 py-3 mt-10 ml-1 text-sm font-thin text-white rounded-lg"
-            >
-              <Link to="/about">{btn}</Link>
-            </Button>
           </motion.div>
         </motion.div>
       </div>
